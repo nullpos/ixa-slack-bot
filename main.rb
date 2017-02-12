@@ -23,6 +23,7 @@ class MapCoordinate
          .gsub(/[,，.．、､]/, ',')
          .tr('０-９', '0-9')
          .split(',')
+         .map! { |i| i.strip }
   end
 
   def same_coord?(xy)
